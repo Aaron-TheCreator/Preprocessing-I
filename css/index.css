@@ -228,6 +228,10 @@ body {
   align-self: center;
   border-radius: 25px;
 }
+.header-content .box-right-align button :hover {
+  background: lightgreen;
+  font-size: 2rem;
+}
 .header-content .box-right-align button a {
   text-decoration: none;
   font-size: 1.5rem;
