@@ -238,6 +238,13 @@ html, body {
 		color: darkgreen;
 	}
 
+	ul,li {
+		font-size:1.8rem;
+		color:darkgreen;
+		list-style-type:disc;
+		margin:5%;
+	}
+
 	display: @display-flex;
 	flex-direction: row;
 	border-radius: @border-radius;
@@ -380,6 +387,7 @@ footer{
 	flex-direction: column;
 	align-items: center;
 	width:100%;
+	border-radius:25px 25px 0 0;
 
 	.text-container {
 		width:50%;
@@ -387,8 +395,8 @@ footer{
 	}
 
 	.contact-form {
-		width:50%
-		height:20%;
+		width:50%;
+		
 		border-radius: @border-radius;
 		padding:5%;
 		display: @display-flex;
@@ -396,4 +404,5 @@ footer{
 		background-color: lightgreen;
 		color:rgb(6, 41, 6);
 	}
+	
 }
