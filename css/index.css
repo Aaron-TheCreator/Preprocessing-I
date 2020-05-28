@@ -90,7 +90,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+/* HTML5display: display-role reset for older browsers */
 article,
 aside,
 details,
@@ -134,25 +134,31 @@ html,
 body {
   height: 100%;
   background-color: lightyellow;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.display {
-  display: flex;
-}
+/*main box .container styling nested @media*/
 .container {
   display: flex;
   width: 100%;
+  height: 100%;
   flex-direction: column;
-  justify-content: center;
-  padding: 10%;
-  border: 1px solid red;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5%;
+  /*border styling for test
+	border: 1px solid red;
+	*/
   background-color: lightyellow;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 500px;
+    flex-direction: column;
+    padding: 0;
+  }
 }
 .nav {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: darkgreen;
 }
 .head-text {
@@ -164,31 +170,53 @@ body {
   line-height: 1.2;
   color: darkgreen;
 }
+/*.top-content styling nested @media*/
 .top-content {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding: 5%;
-  border: 1px solid black;
-  margin-bottom: 10%;
-  width: 100%;
+  align-self: flex-end;
+  padding: 4% 1%;
+  /*border styling for test
+	border: 5px solid black;
+	*/
+  margin: 0 0 10% auto;
+  width: 60%;
   background-color: lightgreen;
   opacity: 1;
   border-radius: 25px;
+  /*
+	@media (max-width: 500px)
+	*/
 }
 .top-content nav {
-  border: 1px solid blue;
+  /*border styling for test
+		border: 1px solid blue;
+		*/
   display: flex;
-  width: 70%;
+  width: 100%;
+  height: 100%;
   justify-content: space-between;
 }
 .top-content nav a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: darkgreen;
+  line-height: 2;
 }
+@media (max-width: 500px) {
+  .top-content {
+    justify-content: center;
+    border: 1px solid green;
+    width: 100%;
+    border-radius: 0 0 25px 25px;
+  }
+}
+/* header styling nested @media*/
 .header-content {
-  border: 1px solid red;
+  /*border styling for test
+	border: 1px solid red;
+	*/
   border-radius: 25px;
   background-color: khaki;
   display: flex;
@@ -204,7 +232,9 @@ body {
   border-radius: 25px;
 }
 .header-content .box-left-align h1 {
-  border: 1px solid yellow;
+  /*border styling for test
+			border: 1px solid yellow;
+			*/
   font-size: 3.5rem;
   color: seagreen;
   text-align: center;
@@ -214,7 +244,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: center;
   margin: 5%;
+  /*border styling for test
+		border: 1px solid white;
+		*/
+  padding-top: 10%;
 }
 .header-content .box-right-align .text-container {
   font-size: 1.3rem;
@@ -229,11 +264,162 @@ body {
   border-radius: 25px;
 }
 .header-content .box-right-align button :hover {
-  background: lightgreen;
+  background-image: linear-gradient(diagonal, lightgreen, forestgreen);
   font-size: 2rem;
 }
 .header-content .box-right-align button a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: darkgreen;
+}
+@media (max-width: 500px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.middle-content {
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  /*border styling for test
+	border: 2px solid blue;
+	*/
+  background-color: lightgreen;
+  margin-top: 10%;
+  padding: 5%;
+}
+.middle-content h2 {
+  font-size: 3rem;
+  color: darkgreen;
+}
+.middle-content p {
+  font-size: 1.8rem;
+  color: darkgreen;
+}
+.middle-content .middle-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /*border styling for test
+		border: 10px dotted purple;
+		*/
+  width: 40%;
+  margin: 5%;
+}
+.middle-content .middle-content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /*border styling for test
+		border: 1px solid royalblue;
+		*/
+  width: 40%;
+  margin: 5%;
+}
+@media (max-width: 500px) {
+  .middle-content {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+    margin: 0;
+  }
+  .middle-content h2 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .middle-content .middle-content-left {
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    border: none;
+  }
+  .middle-content .middle-content-right {
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    border: none;
+  }
+}
+.box-align-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  /*border styling for test
+	border: 5px dashed maroon;
+	*/
+  margin: 5%;
+}
+.box-align-bottom h2 {
+  font-size: 40px;
+  /*border style for test
+		border: 1px solid black;
+		*/
+  color: darkgreen;
+}
+.box-align-bottom table {
+  display: flex;
+  border-spacing: 30px;
+  border-radius: 25px;
+  border: 5px solid chartreuse;
+  background-color: #113011;
+  padding: 2%;
+  margin: 5% 0;
+}
+.box-align-bottom table th {
+  /*border styling for test
+			border: 1px solid blue;
+			*/
+  color: #57c557;
+  padding: 5% 0;
+  margin-bottom: 4%;
+  text-align: left;
+  font-size: 25px;
+}
+.box-align-bottom table td {
+  /*border styling for test
+			border:1px solid hotpink;
+			*/
+  color: lightgreen;
+  padding: 2%;
+  margin-top: 2%;
+}
+@media (max-width: 500px) {
+  .box-align-bottom table {
+    width: 100%;
+    margin: 0;
+  }
+  .box-align-bottom table h2 {
+    font-size: 50px;
+    border: none;
+  }
+  .box-align-bottom table th {
+    border: none;
+    font-size: 25px;
+    text-align: center;
+  }
+  .box-align-bottom table td {
+    border: none;
+  }
+}
+footer {
+  background-color: darkgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+footer .text-container {
+  width: 50%;
+  color: lightgreen;
+}
+footer .contact-form {
+  width: 50%
+		height:20%;
+  border-radius: 25px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgreen;
+  color: #062906;
 }
